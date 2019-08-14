@@ -37,7 +37,7 @@ input{
 .form-button{
   background-color: cadetblue;
   color: azure;
-  height: 50px;
+  height: 40px;
 }
 
 .search-bar{
@@ -53,4 +53,10 @@ input{
 }
 .search-button{
   width: 30%;
+  background-color: cadetblue;
+  color: azure;
+}
+.form-button:disabled, .search-button:disabled{
+  background-color: gray;
+  color: darkgray;
 }
