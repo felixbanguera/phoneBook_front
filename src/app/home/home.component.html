@@ -1,11 +1,27 @@
-<section>
-  <h2>Phone book dashboard, where list of contacts will be shown and you can serach and ad contacts</h2>
-</section>
-<section>
-  <h3>Featured contacts</h3>
-  <ul>
-    <li>Contact1</li>
-    <li>Contact2</li>
-    <li>Contact3</li>
-  </ul>
-</section>
+<div class="grid-container">
+  <div class="create-contact-container">
+    <form [formGroup]="formdataCreate" (ngSubmit)="onClickSubmit(formdataCreate.value)" >
+      <input type="text" class="form-input" name="firstName" placeholder="First Name"
+      formControlName="firstName">
+      <br/>
+      <input type="text" class="form-input" name="lastName" placeholder="Last Name"
+      formControlName="lastName">
+      <br/>
+      <input type="number" class="form-input" name="phoneNumber" placeholder="Phone Number"
+      formControlName="phoneNumber">
+      <br/>
+      <input type="submit" [disabled]="!formdataCreate.valid" class="form-button" value="Add">
+    </form>
+  </div>
+  <div class="contacts-container">
+    <div class="search-bar">
+      <form [formGroup]="formdataSearch" (ngSubmit)="onClickSearch(formdataSearch.value)" >
+        <input type="text" class="search-input" name="searchInput" placeholder="Name or Phone number" formControlName="searchInput">
+        <input type="submit" [disabled]="!formdataSearch.valid" class="search-button" value="Search">
+      </form>
+      <h3>Contacts:</h3>
+    </div>
+    <div class="searched-contacts">
+    </div>
+  </div>
+</div>
