@@ -8,6 +8,7 @@ _This project was generated with [Angular CLI](https://github.com/angular/angula
 
 - Download/fork this project into your local
 - run `npm install`
+- run `npm install -g typescript` if Typescript is not installed in the local env.
 - run `npm run build` (_if you notice some lint errors, don't mind them it has to do to Typescript versions_)
 - run `npm start`
 - browse [localhost:9090](http://localhost:9090)
