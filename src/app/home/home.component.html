@@ -22,7 +22,7 @@
       <h3 class="contact-title">Contacts:</h3>
     </div>
     <div class="searched-contacts">
-      <app-contact-card *ngFor="let contact of contacts"
+      <app-contact-card *ngFor="let contact of contactsToShow"
       [firstName]="contact.firstName"
       [lastName]="contact.lastName"
       [phoneNumber]="contact.phoneNumber">

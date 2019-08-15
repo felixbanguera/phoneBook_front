@@ -26,7 +26,8 @@
     "zone.js": "~0.8.26",
     "es6-shim": "^0.35.3",
     "express-serve-static-core": "^0.1.1",
-    "moment": "^2.19.4"
+    "moment": "^2.19.4",
+    "mongodb": "*"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",
