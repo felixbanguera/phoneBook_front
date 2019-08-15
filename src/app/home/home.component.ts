@@ -18,8 +18,8 @@ export class HomeComponent implements OnInit {
   constructor(private contactService: ContactsService) { }
 
   ngOnInit() {
-    this.contacts = this.contactService.getContacts();
-    this.refreshContactsToShow();
+    this.refreshAllContacts();
+
     this.formdataCreate = new FormGroup({
       firstName: new FormControl("", Validators.required),
       lastName: new FormControl("", Validators.required),
@@ -34,8 +34,18 @@ export class HomeComponent implements OnInit {
   onClickSubmit(data){
     console.log('onClickSubmit', data);
     this.formdataCreate.reset();
-    this.contactService.addContact(data);
-    this.contacts = this.contactService.getContacts();
+    this.contactService.addContact(data).subscribe(response => {
+      console.log("added response:",response);
+      this.refreshAllContacts();
+    });
+  }
+
+  refreshAllContacts(){
+    this.contactService.refreshFromDB().subscribe((data) => {
+      this.contacts = data['contacts'];
+      console.log("HOME contacts", this.contacts);
+      this.refreshContactsToShow();
+    });
   }
 
   onClickSearch(data){

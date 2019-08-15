@@ -3,10 +3,12 @@ const uri = "mongodb+srv://admin:admin@cluster0-8ps0r.mongodb.net/test?retryWrit
 const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
   const collection = client.db("contact").collection("contact");
-  console.log("collection!",collection);
+  //console.log("collection!",collection);
   // perform actions on the collection object
-  const allContacts = client.db("contact").collection("contact").find({firstName: "Felix"});
-  console.log("allContacts!",allContacts);
+  client.db("contact").collection("contact").find({}).toArray().then(res => {
+     console.log("allContacts!",res);
+    });
+
   // collection.insertOne({ firstName: 'Pepito',
   //   lastName: 'Perez',
   //   phoneNumber: 1234567
