@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Contact } from '../contact.interface'
+import { ContactsService } from '../contacts.service';
 
 @Component({
   selector: 'app-home',
@@ -10,20 +11,12 @@ import { Contact } from '../contact.interface'
 export class HomeComponent implements OnInit {
   formdataCreate:FormGroup;
   formdataSearch:FormGroup;
-  contacts:Array<Contact> = [
-    { firstName: 'John',
-      lastName: 'Doe',
-      phoneNumber: 1234567
-    },
-    { firstName: 'Jane',
-      lastName: 'Doe',
-      phoneNumber: 9876543
-    }
-  ];
+  contacts:Array<Contact> = [];
 
-  constructor() { }
+  constructor(private contactService: ContactsService) { }
 
   ngOnInit() {
+    this.contacts = this.contactService.getContacts();
     this.formdataCreate = new FormGroup({
       firstName: new FormControl("", Validators.required),
       lastName: new FormControl("", Validators.required),
@@ -37,6 +30,8 @@ export class HomeComponent implements OnInit {
 
   onClickSubmit(data){
     console.log('onClickSubmit', data);
+    this.contactService.addContact(data);
+    this.contacts = this.contactService.getContacts();
   }
 
   onClickSearch(data){

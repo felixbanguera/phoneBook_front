@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContactCardComponent } from './contact-card/contact-card.component';
+import { ContactsService } from './contacts.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { ContactCardComponent } from './contact-card/contact-card.component';
     AppRoutingModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [ContactsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
