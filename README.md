@@ -10,7 +10,10 @@ _This project was generated with [Angular CLI](https://github.com/angular/angula
 - run `npm install`
 - run `npm run build` (_if you notice some lint errors, don't mind them it has to do to Typescript versions_)
 - run `npm start`
-- browse [lolalhost:9090](http://localhost:9090)
+- browse [localhost:9090](http://localhost:9090)
 
 You should see a view like :
 ![img](https://github.com/felixbanguera/phoneBook_front/blob/master/src/assets/img/preview.png)
+
+## Notes
+It has a bug, when clearing the search input so far.
