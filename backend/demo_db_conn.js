@@ -7,5 +7,13 @@ client.connect(err => {
   // perform actions on the collection object
   const allContacts = client.db("contact").collection("contact").find({firstName: "Felix"});
   console.log("allContacts!",allContacts);
+  // collection.insertOne({ firstName: 'Pepito',
+  //   lastName: 'Perez',
+  //   phoneNumber: 1234567
+  // }, (err, res) => {
+  //   console.log("inserted",res);
+  //   if(err) console.log("NOT inserted",err);
+  // });
+
   client.close();
 });

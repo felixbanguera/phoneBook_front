@@ -3,12 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "node backend/server.js",
+    "build": "ng build && tsc backend/server.ts",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "backend": "node backend/server.js"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
