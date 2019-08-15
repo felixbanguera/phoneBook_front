@@ -1,27 +1,16 @@
 # Phonebook
+The phonebook project is an excercise to show front end capabilities, the idea was to create an app that could list contacts ({firstName, lastName, phoneNumber}), that could add contacts and could search contacts.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+The excercise was originally for Java developers, so it was adjusted to front development.
+_This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9._
 
-## Development server
+## Setup
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Download/fork this project into your local
+- run `npm install`
+- run `npm run build` (_if you notice some lint errors, don't mind them it has to do to Typescript versions_)
+- run `npm start`
+- browse [lolalhost:9090](http://localhost:9090)
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+You should see a view like :
+![img](https://github.com/felixbanguera/phoneBook_front/blob/master/src/assets/img/preview.png)
