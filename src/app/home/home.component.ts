@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Contact } from '../contact.interface'
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,17 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class HomeComponent implements OnInit {
   formdataCreate:FormGroup;
   formdataSearch:FormGroup;
+  contacts:Array<Contact> = [
+    { firstName: 'John',
+      lastName: 'Doe',
+      phoneNumber: 1234567
+    },
+    { firstName: 'Jane',
+      lastName: 'Doe',
+      phoneNumber: 9876543
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {

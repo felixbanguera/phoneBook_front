@@ -1,0 +1,23 @@
+.info-container{
+  border-style: solid;
+  border-radius: 6px;
+  border-color: cadetblue;
+  padding-left: 6%;
+}
+.first-name{
+  font-size: 17px;
+}
+.last-name{
+  font-weight: bold;
+  font-size: 25px;
+}
+.name{
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 6px;
+  margin-bottom: 5%;
+  display: inline-block;
+
+}
+.phone-number{
+  margin-top: 0px;
+}
