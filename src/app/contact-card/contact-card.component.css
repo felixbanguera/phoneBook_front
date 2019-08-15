@@ -1,8 +1,9 @@
 .info-container{
   border-style: solid;
   border-radius: 6px;
-  border-color: cadetblue;
+  border-color: cornflowerblue;
   padding-left: 6%;
+  color: aliceblue;
 }
 .first-name{
   font-size: 17px;

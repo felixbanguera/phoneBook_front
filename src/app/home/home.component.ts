@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit {
 
   onClickSubmit(data){
     console.log('onClickSubmit', data);
+    this.formdataCreate.reset();
     this.contactService.addContact(data);
     this.contacts = this.contactService.getContacts();
   }

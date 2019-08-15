@@ -32,18 +32,14 @@ input{
   background-color: aliceblue;
 }
 .form-input{
-  color: blue;
+  color: #173f5f;
+  width: 97%;
 }
-.form-button{
-  background-color: cadetblue;
-  color: azure;
-  height: 40px;
-}
+
 
 .search-bar{
   grid-column: 1 / 4;
   grid-row: 1 / 1;
-
 }
 .searched-contacts{
   grid-column: 1 / 4;
@@ -57,12 +53,24 @@ input{
 .search-input{
   width: 63%;
 }
+.button{
+  background-color: cornflowerblue;
+  color: azure;
+}
+.form-button{
+  height: 40px;
+  width: 99%;
+}
 .search-button{
   width: 30%;
-  background-color: cadetblue;
-  color: azure;
 }
 .form-button:disabled, .search-button:disabled{
   background-color: gray;
   color: darkgray;
+}
+.contact-title{
+  padding-left: 1%;
+  font-size: 2em;
+  color: aliceblue;
+  font-family: sans-serif;
 }

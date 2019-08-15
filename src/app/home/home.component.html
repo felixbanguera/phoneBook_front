@@ -1,4 +1,4 @@
-<div class="grid-container">
+<div class="grid-container" [ngStyle]="{background: 'url(../../assets/img/background.jpg)'}">
   <div class="create-contact-container">
     <form [formGroup]="formdataCreate" (ngSubmit)="onClickSubmit(formdataCreate.value)" >
       <input type="text" class="form-input" name="firstName" placeholder="First Name"
@@ -10,16 +10,16 @@
       <input type="number" class="form-input" name="phoneNumber" placeholder="Phone Number"
       formControlName="phoneNumber">
       <br/>
-      <input type="submit" [disabled]="!formdataCreate.valid" class="form-button" value="Add">
+      <input type="submit" [disabled]="!formdataCreate.valid" class="button form-button" value="Add">
     </form>
   </div>
   <div class="contacts-container">
     <div class="search-bar">
       <form [formGroup]="formdataSearch" (ngSubmit)="onClickSearch(formdataSearch.value)" >
         <input type="text" class="search-input" name="searchInput" placeholder="Name or Phone number" formControlName="searchInput">
-        <input type="submit" [disabled]="!formdataSearch.valid" class="search-button" value="Search">
+        <input type="submit" [disabled]="!formdataSearch.valid" class="button search-button" value="Search">
       </form>
-      <h3>Contacts:</h3>
+      <h3 class="contact-title">Contacts:</h3>
     </div>
     <div class="searched-contacts">
       <app-contact-card *ngFor="let contact of contacts"
